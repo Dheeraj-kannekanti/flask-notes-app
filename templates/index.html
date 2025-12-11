@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="fw-bold">Your Notes</h2>
+    <a href="/add" class="btn btn-primary">＋ Add Note</a>
+</div>
+
+{% if notes %}
+    <div class="row">
+        {% for note in notes %}
+        <div class="col-md-4 mb-4">
+            <div class="card note-card p-3">
+                <h5 class="fw-bold">{{ note.title }}</h5>
+                <p class="text-muted">{{ note.content }}</p>
+                <div class="d-flex justify-content-between mt-3">
+                    <a href="/edit/{{ note.id }}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/delete/{{ note.id }}" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="text-center mt-5">
+        <h4>No notes yet 😢</h4>
+        <p class="text-muted">Click "Add Note" to create your first one.</p>
+    </div>
+{% endif %}
+
+{% endblock %}
