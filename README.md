@@ -20,21 +20,23 @@ The app uses SQLite as the database and Bootstrap 5 for a clean modern UI.
 ---
 
 ##  Project Structure
-flask-notes-app/
-│── app.py
-│── notes.db (auto-created)
-│── requirements.txt
+flask-notes-app
 │
-├── templates/
-│     ├── base.html
-│     ├── index.html
-│     ├── add.html
-│     ├── edit.html
-│     ├── login.html
-│     ├── register.html
+├─ app.py
+├─ requirements.txt
+├─ notes.db  (generated automatically)
 │
-└── static/
-      └── (optional CSS files)
+├─ templates
+│    ├─ base.html
+│    ├─ index.html
+│    ├─ add.html
+│    ├─ edit.html
+│    ├─ login.html
+│    └─ register.html
+│
+└─ static
+     └─ style.css  (optional)
+
 
 ---
 
